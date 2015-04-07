@@ -11,4 +11,7 @@ def status():
 
 @app.route("/echo/<word>")
 def echo(word):
-    return word
+    if app.caps:
+        return word.upper()
+    else:
+        return word
